@@ -1,0 +1,26 @@
+---
+output: html_document
+---
+
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+</script>
+```
+
+<!-- place introduction here -->
+
+In the presence of H~2~O~2~ and H~2~SO~4~, a solution of VOSO~4~ forms a reddish brown color believed to be a compound with the general formula (VO)~2~(SO~4~)~3~. The intensity of the solution's color depends on the concentration of vanadium, which means we can use its absorbance at a wavelength of 450 nm to develop a quantitative method for vanadium. The intensity of the color also depends on the relative amounts of H~2~O~2~ and H~2~SO~4~ used: in particular, a large excess of H~2~O~2~ decreases the solution’s absorbance as it changes from a reddish brown color to a yellowish color. To develop a standard method for vanadium we must determine the amount of H~2~O~2~ and H~2~SO~4~ that will maximize the absorbance at 450 nm. Using the terminology of statisticians, we identify absorbance as the system’s response. Hydrogen peroxide and sulfuric acid are factors whose concentrations, or factor levels, determine the system’s response. A plot that shows how the response changes over a range of factor levels is called a response surface. 
+
+#### Finding the Optimum Response
+
+To find the optimum response we use a searching algorithm. The figure on the right---which shows a portion of the South Dakota Badlands, a barren landscape that includes many narrow ridges formed through erosion---will help us understand our challenge. Suppose you wish to climb to the highest point of the ridge in this figure. Because the path to the summit is not obvious, you might adopt the following simple rule: look around you and take one step in the direction that has the greatest change in elevation, and repeat this instruction until no further movement is possible. The route you follow is the result of this searching algorithm. Of course there are as many routes as there are starting points, three examples of which we see in the figure. Note that some routes do not reach the highest point, which we call the global optimum. Instead, many routes end at a local optimum from which further movement is impossible. A searching algorithm is evaluated by its effectiveness (Did it find the global optimum?) and by its efficiency (Did it find the global optimum quickly?). 
+
+In this module we will consider two searching algorithms: sequential optimization and steepest ascent optimization. We will limit our treatment to systems with two factors so that we can display the searching algorithm's progress on a contour plot in two-dimensions or on a surface plot in three dimensions.

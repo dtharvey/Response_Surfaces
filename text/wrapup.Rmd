@@ -1,0 +1,65 @@
+---
+output: html_document
+---
+
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+
+```{=html}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+</script>
+```
+
+<!-- place wrapping up here -->
+
+#### Spot Test for Vanadium
+
+The description of the spot test for vanadium is based on a procedure outlined in *Vogel’s Textbook of Quantitative Inorganic Analysis*, Longman: London, **1978**, p. 752.
+
+#### Example Response Surfaces Used in this Module
+
+The figure to the right shows the response surfaces for the four examples used in this module where the factor levels for *A* and *B* are restricted to integer values between 0 and 10.
+
+***example 1 (upper left)***: The equation for the response surface is a second-order polynomial in *A* and in *B* without an interaction between the two factors. 
+
+$$1.68 + 0.24 \times A + 0.56 \times B - 0.04 \times A^2 - 0.04 \times B^2$$ 
+
+When the *A*^2^ and the *B*^2^ terms are both negative and similar in value, the resulting response surface has a dome-like shape. The response surface's maximum response is at (3,7). 
+
+***example 2 (upper right)***: The equation for the response surface is a first-order polynomial in *A* with an interaction between *A* and *B*.
+
+$$4.0 - 0.4 \times A + 0.08 \times A \times B$$ 
+
+Note that when factor *A* is zero the response is fixed at 4 for all values of *B*; this is because *B* only appears in the equation's final interaction term. The response surface's maximum response is at (10,10). 
+
+***example 3 (lower left)***: The equation for the response surface is a second-order polynomial in *A* and in *B* with an interaction between the two factors. 
+
+$$3.264 + 1.537 \times A + 0.5664 \times B - 0.1505 \times A^2 - 0.02734 \times B^2 - 0.05785 \times A \times B$$ 
+
+When the *A*^2^ and the *B*^2^ terms are both negative but not close in value, the resulting response surface has a ridge-like shape. The response surface's maximum response is at (3.91,6.22), which means the optimization ends at (4,6) given the restriction that all values of *A* and *B* are integers. 
+
+***example 4 (lower right)***: The equation for the response surface is a second-order polynomial in *A* and in *B* without an interaction between the two factors.
+
+$$4 + 0.8 \times A - 0.7 \times B - 0.09 \times A^2 + 0.08 \times B^2$$ 
+
+When one of second-order terms (*A*^2^ and *B*^2^) is negative and one is positive, and when they are similar in magnitude, the resulting response surface has a saddle-like shape. The response surface's maximum response is at (4.38,0), which means the optimization ends at (4,0) given the restriction that all values of *A* and *B* are integers; however, there is a local optimum at (4,10) that is reached when beginning with values of B greater than 5. 
+
+You can explore the relationship between the signs and relative magnitudes of *A* and *B* and the shape of a second-order polynomial equation using the module *AC 3.0: Introduction to Response Surfaces*.
+
+#### Rotating Surface Plots
+
+There are a variety of functions for displaying data in three dimensions, such as the `persp` function that is used in this module. Such functions use two angles---theta and phi---to define the direction in which you view the data. These angles are typically defined as the azimuthal angle and the colatitude angle. Unless you know how to navigate by the stars, you likely are not familiar with the the terms azimuthal and colatitude; thus, we describe them here as the angle by which we rotate the *xy*-plane around the *z*-axis (azimuthal angle) and the angle by which we tilt the *z*-axis relative to the original *xy*-plane (colatitude angle).
+
+#### Additional Resources
+
+For an introduction to response surfaces and the mathematical modeling of response surfaces, see Chapter 14 in [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/14%3A_Developing_a_Standard_Method/14.01%3A_Optimizing_the_Experimental_Procedure) and Chapter 9 in [Chemometics Using R](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Chemometrics_Using_R_(Harvey)/09%3A_Gathering_Data). Another useful text is S. N. Deming and S. L. Morgan, *Experimental Design: A Chemometric Approach*, Elsevier: Amsterdam, 1987.
+
+
+
+
+
