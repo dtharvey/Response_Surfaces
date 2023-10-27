@@ -6,4 +6,4 @@ To run locally, install the packages shiny, shinythemes, and plot3D (if not alre
 
 library(shiny)
 
-shiny::runGitHub("Respose_Surfaces","dtharvey")
+shiny::runGitHub("Response_Surfaces","dtharvey")
